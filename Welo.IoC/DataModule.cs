@@ -1,6 +1,7 @@
 ﻿using System;
 using Autofac;
 using Welo.Data;
+using Welo.Data.Repository.WebApplication;
 using Welo.Domain.Interfaces.Repositories;
 
 namespace Welo.IoC
@@ -19,6 +20,14 @@ namespace Welo.IoC
             builder.RegisterType<LeadRepository>()
                    .As<ILeadRepository>()
                    .InstancePerLifetimeScope();
+
+            #region WebApplication
+
+            builder.RegisterType<MovieRepository>()
+                   .As<IMovieRepository>()
+                   .InstancePerLifetimeScope();
+
+            #endregion
         }
     }
 }

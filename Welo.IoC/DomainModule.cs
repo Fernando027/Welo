@@ -20,6 +20,14 @@ namespace Welo.IoC
             builder.RegisterType<BotCommandsService>()
                    .As<IStandardCommandService>()
                    .InstancePerLifetimeScope();
+
+            #region WebApplication
+
+            builder.RegisterType<MovieService>()
+                   .As<IMovieService>()
+                   .InstancePerLifetimeScope();
+
+            #endregion
         }
     }
 }

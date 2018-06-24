@@ -38,6 +38,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Welo.GoogleDocsData", "Welo.GoogleDocsData\Welo.GoogleDocsData.csproj", "{B70829B2-5C3D-4DF4-B223-216FD49D6240}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Welo.WebApplication", "Welo.WebApplication\Welo.WebApplication.csproj", "{4003AC0A-E950-4850-B30C-ACB9D07C30E0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DD232CE3-FCC8-47AD-8EF2-FCEE856CA895} = {DD232CE3-FCC8-47AD-8EF2-FCEE856CA895}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="WebApplicationModule.cs" />
     <Compile Include="ApplicationModule.cs" />
     <Compile Include="DataModule.cs" />
     <Compile Include="DomainModule.cs" />

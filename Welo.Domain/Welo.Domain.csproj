@@ -38,22 +38,26 @@
     <Compile Include="Entities\CollectionOptions.cs" />
     <Compile Include="Entities\ConfigurationEntity.cs" />
     <Compile Include="Entities\Enums\CommandType.cs" />
+    <Compile Include="Entities\Enums\Genre.cs" />
     <Compile Include="Entities\Enums\TypeButton.cs" />
     <Compile Include="Entities\GDocs\GSheetQuery.cs" />
     <Compile Include="Entities\InfoCommandMask.cs" />
     <Compile Include="Entities\LeadEntity.cs" />
+    <Compile Include="Entities\Movie.cs" />
     <Compile Include="Entities\QuotesResponsesEntity.cs" />
     <Compile Include="Entities\ResponseTrigger.cs" />
     <Compile Include="Entities\StandardCommandEntity.cs" />
     <Compile Include="Interfaces\IBotCommand.cs" />
     <Compile Include="Interfaces\IGSheetContext.cs" />
     <Compile Include="Interfaces\Repositories\ILeadRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IMovieRepository.cs" />
     <Compile Include="Interfaces\Repositories\IStandardCommandRepository.cs" />
     <Compile Include="Interfaces\Repositories\IConfigurationsRepository.cs" />
     <Compile Include="Interfaces\Repositories\Base\IRepository.cs" />
     <Compile Include="Interfaces\Repositories\Base\IRepositoryAsync.cs" />
     <Compile Include="Interfaces\Repositories\Base\IValidatableRepository.cs" />
     <Compile Include="Interfaces\Repositories\Base\IValidatableRepositoryAsync.cs" />
+    <Compile Include="Interfaces\Services\IMovieService.cs" />
     <Compile Include="Interfaces\Services\IStandardCommandService.cs" />
     <Compile Include="Interfaces\Services\ILeadService.cs" />
     <Compile Include="Interfaces\Services\IServiceBase.cs" />
@@ -64,6 +68,7 @@
     <Compile Include="Services\GSheets\ICommandTextGoogle.cs" />
     <Compile Include="Services\LeadService.cs" />
     <Compile Include="Services\BotCommandsService.cs" />
+    <Compile Include="Services\MovieService.cs" />
     <Compile Include="Services\ServiceBase.cs" />
   </ItemGroup>
   <ItemGroup>
