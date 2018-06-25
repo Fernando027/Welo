@@ -23,6 +23,9 @@ namespace Welo.WebApplication
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new StyleBundle("~/Content/pagination").Include(
+                "~/Content/PagedList.css"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));

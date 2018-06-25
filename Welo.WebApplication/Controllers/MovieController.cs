@@ -1,9 +1,10 @@
-﻿using System.Linq;
+﻿using PagedList;
+using System.Linq;
 using System.Net;
 using System.Web.Mvc;
 using Welo.Domain.Entities;
 using Welo.Domain.Interfaces.Services;
-using Welo.WebApplication.Models;
+using Welo.WebApplication.ViewModels;
 
 namespace Welo.WebApplication.Controllers
 {
@@ -17,17 +18,18 @@ namespace Welo.WebApplication.Controllers
         }
 
         // GET: Movie
-        public ActionResult Index()
+        public ActionResult Index([Bind(Include = "Name,Year,Genre")] MovieViewModel movieViewModel = null)
         {
-            var viewModels = _service.GetAll().Select(m => new MovieViewModel
-            {
-                Id = m.Id,
-                Genre = m.Genre,
-                Name = m.Name,
-                Year = m.Year
-            }
-                );
-            return View(viewModels);
+            var viewModels = _service.GetAll()
+                .Select(m => new MovieViewModel
+                {
+                    Id = m.Id,
+                    Genre = m.Genre,
+                    Name = m.Name,
+                    Year = m.Year
+                });
+
+            return View(viewModels.ToPagedList(1, 10));
         }
 
         // GET: Movie/Details/5
