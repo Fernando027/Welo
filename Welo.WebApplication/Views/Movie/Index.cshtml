@@ -16,13 +16,13 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.ActionLinkFor(model => model.Name, "Index", new { sortOrder = "desc" })
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Year)
+            @Html.ActionLinkFor(model => model.Year, "Index", new { sortOrder = "desc" })
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Genre)
+            @Html.ActionLinkFor(model => model.Genre, "Index", new { sortOrder = "desc" })
         </th>
         <th></th>
     </tr>

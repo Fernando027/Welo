@@ -18,7 +18,7 @@ namespace Welo.WebApplication.Controllers
         }
 
         // GET: Movie
-        public ActionResult Index([Bind(Include = "Name,Year,Genre")] MovieViewModel movieViewModel = null)
+        public ActionResult Index([Bind(Include = "Name,Year,Genre")] MovieViewModel movieViewModel = null, string sortOrder = null)
         {
             var viewModels = _service.GetAll()
                 .Select(m => new MovieViewModel
@@ -28,6 +28,15 @@ namespace Welo.WebApplication.Controllers
                     Name = m.Name,
                     Year = m.Year
                 });
+
+            switch (sortOrder)
+            {
+                case "Name":
+                    viewModels = viewModels.OrderBy(v => v.Name);
+                    break;
+                default:
+                    break;
+            }
 
             return View(viewModels.ToPagedList(1, 10));
         }
